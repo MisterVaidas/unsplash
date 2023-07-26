@@ -1,5 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
+import './styles.css';
 
 function App() {
   const [searchQuery, setSearchQuery] = useState('');
@@ -22,10 +23,10 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Find any image</h1>
-      <input type="text" placeholder="Enter image subject" onChange={handleSearch} />
-      <button onClick={getImage}>Explore!</button>
-      {img && <img src={img} alt={searchQuery}></img>} 
+      <h1 className="title">Find any image</h1>
+      <input className="input" type="text" placeholder="Enter image subject" onChange={handleSearch} />
+      <button className="button" onClick={getImage}>Explore!</button>
+      {img && <img className="img" src={img} alt={searchQuery}></img>} 
     </div>
   );
 }
